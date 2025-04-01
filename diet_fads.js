@@ -68,16 +68,26 @@ function initTableauVizzes() {
   const url1 = "https://public.tableau.com/views/FadDietTrendsandUSimports/FadDietTrendsandUSimports";
   const url2 = "https://public.tableau.com/views/GlobalUSFadDietTrends/DietGeoTrends";
 
-  const options = {
+  const options1 = {
     hideTabs: true,
     onFirstInteractive: function () {
-      // No need to store worksheet references now — we’ll get them fresh when we apply filters
+      tableauViz1 = viz1; // now it's fully ready
+      console.log("Viz 1 is ready!");
     }
   };
 
-  tableauViz1 = new tableau.Viz(document.getElementById("vizContainer1"), url1, options);
-  tableauViz2 = new tableau.Viz(document.getElementById("vizContainer2"), url2, options);
+  const options2 = {
+    hideTabs: true,
+    onFirstInteractive: function () {
+      tableauViz2 = viz2; // now it's fully ready
+      console.log("Viz 2 is ready!");
+    }
+  };
+
+  const viz1 = new tableau.Viz(document.getElementById("vizContainer1"), url1, options1);
+  const viz2 = new tableau.Viz(document.getElementById("vizContainer2"), url2, options2);
 }
+
 
 initTableauVizzes();
 
