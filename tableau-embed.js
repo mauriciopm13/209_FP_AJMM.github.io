@@ -62,19 +62,20 @@ async function applyFilterToViz(vizId, fieldName, value) {
     if (activeSheet.sheetType === "dashboard") {
       const sheets = await activeSheet.worksheets;
       for (const sheet of sheets) {
-        console.log("Applying to:", sheet.name);
         try {
           await sheet.applyFilterAsync(fieldName, value, "replace");
+          console.log(`✅ Applied filter to: ${sheet.name}`);
         } catch (e) {
-          console.warn(`Failed on sheet "${sheet.name}" with error:`, e.message);
+          console.log(`⚠️ Sheet "${sheet.name}" does not support filter "${fieldName}". Skipping.`);
         }
       }
     } else {
-      console.log("Applying to:", activeSheet.name);
       await activeSheet.applyFilterAsync(fieldName, value, "replace");
+      console.log(`✅ Applied filter to: ${activeSheet.name}`);
     }
   } catch (err) {
-    console.error(`Error applying filter to ${vizId}:`, err);
+    console.error(`❌ Error applying filter to viz "${vizId}":`, err);
   }
 }
+
 
