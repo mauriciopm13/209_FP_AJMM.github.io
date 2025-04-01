@@ -1,4 +1,7 @@
 let dietData = [];
+let tableauViz1 = null;
+let tableauViz2 = null;
+
 
 // Fetch the JSON file with diet info
 fetch('diets_data.json')
@@ -36,5 +39,45 @@ function loadDietInfo(diet) {
     li.textContent = food;
     foodsList.appendChild(li);
   });
+
+  function applyFilterToViz(viz, filterValue) {
+    const sheet = viz.getWorkbook().getActiveSheet();
+  
+    // If it's a dashboard, get the right worksheet inside it
+    let targetSheet = sheet;
+    if (sheet.getSheetType() === 'dashboard') {
+      const worksheets = sheet.getWorksheets();
+  
+      worksheets.forEach(ws => {
+        // Try applying the filter to each worksheet (some might not have the filter, which is okay)
+        ws.applyFilterAsync("Diet", filterValue, tableau.FilterUpdateType.REPLACE).catch(() => {});
+      });
+    } else {
+      targetSheet.applyFilterAsync("Diet", filterValue, tableau.FilterUpdateType.REPLACE).catch(() => {});
+    }
+  }
+  
+  if (diet.filter_value) {
+    if (tableauViz1) applyFilterToViz(tableauViz1, diet.filter_value);
+    if (tableauViz2) applyFilterToViz(tableauViz2, diet.filter_value);
+  }
+  
 }
+
+function initTableauVizzes() {
+  const url1 = "https://public.tableau.com/views/FadDietTrendsandUSimports/FadDietTrendsandUSimports";
+  const url2 = "https://public.tableau.com/views/GlobalUSFadDietTrends/DietGeoTrends";
+
+  const options = {
+    hideTabs: true,
+    onFirstInteractive: function () {
+      // No need to store worksheet references now — we’ll get them fresh when we apply filters
+    }
+  };
+
+  tableauViz1 = new tableau.Viz(document.getElementById("vizContainer1"), url1, options);
+  tableauViz2 = new tableau.Viz(document.getElementById("vizContainer2"), url2, options);
+}
+
+initTableauVizzes();
 

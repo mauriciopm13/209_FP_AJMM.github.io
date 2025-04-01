@@ -14,7 +14,8 @@
       "Leafy greens",
       "Berries",
       "Nuts"
-    ]
+    ],
+    "filter_value": "Atkins Diet"
   },
   {
     "name": "Gluten-Free Diet",
@@ -32,7 +33,8 @@
       "Meat",
       "Fish",
       "Dairy"
-    ]
+    ],
+    "filter_value": "Gluten Free Diet"
   },
   {
     "name": "Grapefruit Diet",
@@ -46,7 +48,8 @@
       "Fish",
       "Vegetables",
       "Coffee"
-    ]
+    ],
+    "filter_value": "Grapefruit Diet"
   },
   {
     "name": "Keto Diet",
@@ -63,7 +66,8 @@
       "Olive oil",
       "Leafy greens",
       "Meat"
-    ]
+    ],
+    "filter_value": "Keto Diet"
   },
   {
     "name": "Low Fat Diet",
@@ -78,7 +82,8 @@
       "White fish",
       "Low-fat dairy",
       "Legumes"
-    ]
+    ],
+    "filter_value": "Low Fat Diet"
   },
   {
     "name": "Master Cleanse",
@@ -90,7 +95,8 @@
       "Maple syrup",
       "Cayenne pepper",
       "Water"
-    ]
+    ],
+    "filter_value": "Master Cleanse"
   },
   {
     "name": "Paleo Diet",
@@ -104,7 +110,8 @@
       "Vegetables",
       "Nuts",
       "Seeds"
-    ]
+    ],
+    "filter_value": "Paleo Diet"
   },
   {
     "name": "Special K Diet",
@@ -117,7 +124,8 @@
       "Fruits",
       "Vegetables",
       "Lean protein"
-    ]
+    ],
+    "filter_value": "Special K"
   },
   {
     "name": "Whole30",
@@ -131,7 +139,8 @@
       "Vegetables",
       "Fruits",
       "Natural fats"
-    ]
+    ],
+    "filter_value": "Whole 30"
   },
   {
     "name": "Zone Diet",
@@ -144,6 +153,7 @@
       "Vegetables",
       "Nuts",
       "Olive oil"
-    ]
+    ],
+    "filter_value": "Zone Diet"
   }
 ]
