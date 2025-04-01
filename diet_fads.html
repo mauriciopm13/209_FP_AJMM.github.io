@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diet Fads</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="diet_fads.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Sections</button>
+        <div class="dropdown-content" id="dropdown-menu">
+          <a href="DataVizIndexProject.html">Caloric Supply</a>
+          <a href="gdp_calories.html">GDP & Calories</a>
+          <a href="demographics.html">Demographics</a>
+          <a href="diet_fads.html">Diet Fads</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Intro Header -->
+  <section class="intro">
+    <h1>Take a deep-dive into the top 10 fad diets in the last decade!</h1>
+  </section>
+
+  <!-- Diet Links -->
+  <section class="diet-list" id="diet-buttons">
+    <!-- Filled by JS -->
+  </section>
+
+  <!-- Diet Info -->
+  <section class="team-member" id="diet-info">
+    <img id="diet-image" src="" alt="" />
+    <h2 id="diet-name"></h2>
+    <p id="diet-summary"></p>
+    <h4>Main Foods:</h4>
+    <div class="foods-container">
+      <ul id="diet-foods"></ul>
+    </div>
+    
+    <p><strong>Peak Search Trend:</strong> <span id="diet-peak"></span></p>
+  </section>
+
+  <section id="tableau-viz">
+    <h3>Interactive Visualizations</h3>
+  
+    <!-- Visualization 1 -->
+    <div class='tableauPlaceholder' id='viz1' style='position: relative; margin-bottom: 60px;'>
+      <noscript>
+        <a href='#'>
+          <img alt='Fad Diet Trends and US Imports'
+               src='https://public.tableau.com/static/images/Fa/FadDietTrendsandUSimports/FadDietTrendsandUSimports/1.png'
+               style='border: none' />
+        </a>
+      </noscript>
+      <object class='tableauViz'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='name' value='FadDietTrendsandUSimports/FadDietTrendsandUSimports' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+      </object>
+    </div>
+  
+    <!-- Visualization 2 -->
+    <div class='tableauPlaceholder' id='viz2' style='position: relative; margin-top: 20px;'>
+      <noscript>
+        <a href='#'>
+          <img alt='Global US Fad Diet Trends'
+               src='https://public.tableau.com/static/images/Gl/GlobalUSFadDietTrends/DietGeoTrends/1.png'
+               style='border: none' />
+        </a>
+      </noscript>
+      <object class='tableauViz'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='name' value='GlobalUSFadDietTrends/DietGeoTrends' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+      </object>
+    </div>
+  </section>
+  
+  <!-- Tableau resizing logic -->
+  <script type='text/javascript'>
+    function resizeTableauViz(divId, defaultHeight) {
+      var divElement = document.getElementById(divId);
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      if (divElement.offsetWidth > 800) {
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+      } else if (divElement.offsetWidth > 500) {
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+      } else {
+        vizElement.style.width = '100%';
+        vizElement.style.height = defaultHeight + 'px';
+      }
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    }
+  
+    resizeTableauViz('viz1', 1377);
+    resizeTableauViz('viz2', 727);
+  </script>
+  
+  <!-- Tableau Script -->
+  <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+</body>
+</html>
