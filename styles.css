@@ -194,17 +194,18 @@ nav {
     color: #0d2c3f;
 }
 
-#tableau-viz {
+tableau-viz {
+    width: 100%;
     max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
+    height: 80vh;
+    min-height: 700px;
   }
   
-  #tableau-viz object {
-    display: block;
-    margin: auto;
+
+  .viz-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto 60px auto;
   }
   
   .intro,
@@ -234,6 +235,7 @@ nav {
     margin-bottom: 4px;
   }
   
+
   
   
   

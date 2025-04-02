@@ -181,7 +181,7 @@
       "Vegetables",
       "Lean protein"
     ],
-    "filter_value": "Special K",
+    "filter_value": ["Special K", "Special K Diet"],
     "subcategory_filter_values": [
       "Dairy",
       "Fruits",
