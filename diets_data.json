@@ -15,7 +15,16 @@
       "Berries",
       "Nuts"
     ],
-    "filter_value": "Atkins Diet"
+    "filter_value": "Atkins Diet",
+    "subcategory_filter_values": [
+      "Animals",
+      "Dairy",
+      "Fish",
+      "Fruits",
+      "Meats",
+      "Nuts",
+      "Vegetables"
+    ]
   },
   {
     "name": "Gluten-Free Diet",
@@ -34,7 +43,15 @@
       "Fish",
       "Dairy"
     ],
-    "filter_value": "Gluten Free Diet"
+    "filter_value": "Gluten Free Diet",
+    "subcategory_filter_values": [
+      "Dairy",
+      "Fish",
+      "Fruits",
+      "Grains",
+      "Meats",
+      "Vegetables"
+    ]
   },
   {
     "name": "Grapefruit Diet",
@@ -49,7 +66,15 @@
       "Vegetables",
       "Coffee"
     ],
-    "filter_value": "Grapefruit Diet"
+    "filter_value": "Grapefruit Diet",
+    "subcategory_filter_values": [
+      "Animals",
+      "Coffee",
+      "Fish",
+      "Fruits",
+      "Meats",
+      "Vegetables"
+    ]
   },
   {
     "name": "Keto Diet",
@@ -67,7 +92,17 @@
       "Leafy greens",
       "Meat"
     ],
-    "filter_value": "Keto Diet"
+    "filter_value": "Keto Diet",
+    "subcategory_filter_values": [
+      "Animals",
+      "Dairy",
+      "Fish",
+      "Fruits",
+      "Meats",
+      "Nuts",
+      "Vegetables",
+      "VegetablesOil"
+    ]
   },
   {
     "name": "Low Fat Diet",
@@ -83,7 +118,15 @@
       "Low-fat dairy",
       "Legumes"
     ],
-    "filter_value": "Low Fat Diet"
+    "filter_value": "Low Fat Diet",
+    "subcategory_filter_values": [
+      "Dairy",
+      "Fish",
+      "Fruits",
+      "Grains",
+      "Meats",
+      "Vegetables"
+    ]
   },
   {
     "name": "Master Cleanse",
@@ -96,7 +139,13 @@
       "Cayenne pepper",
       "Water"
     ],
-    "filter_value": "Master Cleanse"
+    "filter_value": "Master Cleanse",
+    "subcategory_filter_values": [
+      "Fruits",
+      "Other",
+      "Spices",
+      "Sweets"
+    ]
   },
   {
     "name": "Paleo Diet",
@@ -111,7 +160,14 @@
       "Nuts",
       "Seeds"
     ],
-    "filter_value": "Paleo Diet"
+    "filter_value": "Paleo Diet",
+    "subcategory_filter_values": [
+      "Fish",
+      "Fruits",
+      "Meats",
+      "Nuts",
+      "Vegetables"
+    ]
   },
   {
     "name": "Special K Diet",
@@ -125,7 +181,14 @@
       "Vegetables",
       "Lean protein"
     ],
-    "filter_value": "Special K"
+    "filter_value": "Special K",
+    "subcategory_filter_values": [
+      "Dairy",
+      "Fruits",
+      "Grains",
+      "Meats",
+      "Vegetables"
+    ]
   },
   {
     "name": "Whole30",
@@ -140,7 +203,15 @@
       "Fruits",
       "Natural fats"
     ],
-    "filter_value": "Whole 30"
+    "filter_value": "Whole 30",
+    "subcategory_filter_values": [
+      "Animals",
+      "Fish",
+      "Fruits",
+      "Meats",
+      "Vegetables",
+      "VegetablesOil"
+    ]
   },
   {
     "name": "Zone Diet",
@@ -154,6 +225,13 @@
       "Nuts",
       "Olive oil"
     ],
-    "filter_value": "Zone Diet"
+    "filter_value": "Zone Diet",
+    "subcategory_filter_values": [
+      "Fruits",
+      "Meats",
+      "Nuts",
+      "Vegetables",
+      "VegetablesOil"
+    ]
   }
 ]

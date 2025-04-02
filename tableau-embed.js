@@ -45,10 +45,13 @@ async function loadDietInfo(diet) {
     foodsList.appendChild(li);
   });
 
-  // Apply filter if visualizations are ready
   if (diet.filter_value) {
     await applyFilterToViz("tableauViz1", "Diet", diet.filter_value);
-    await applyFilterToViz("tableauViz2", "Diet", diet.filter_value);
+    await applyFilterToViz("tableauViz2", "Diet (ALL GeoMap US and Global.csv)", diet.filter_value);  // updated name
+  }
+  
+  if (diet.subcategory_filter_values && Array.isArray(diet.subcategory_filter_values)) {
+    await applyFilterToViz("tableauViz1", "Category (FoodImports.csv)", diet.subcategory_filter_values);  // updated name
   }
 }
 
@@ -63,14 +66,14 @@ async function applyFilterToViz(vizId, fieldName, value) {
       const sheets = await activeSheet.worksheets;
       for (const sheet of sheets) {
         try {
-          await sheet.applyFilterAsync(fieldName, [value], "replace");
+          await sheet.applyFilterAsync(fieldName, Array.isArray(value) ? value : [value], "replace");
           console.log(`✅ Applied filter to: ${sheet.name}`);
         } catch (e) {
           console.log(`⚠️ Sheet "${sheet.name}" does not support filter "${fieldName}". Skipping.`);
         }
       }
     } else {
-      await activeSheet.applyFilterAsync(fieldName, value, "replace");
+      await activeSheet.applyFilterAsync(fieldName, Array.isArray(value) ? value : [value], "replace");
       console.log(`✅ Applied filter to: ${activeSheet.name}`);
     }
   } catch (err) {
