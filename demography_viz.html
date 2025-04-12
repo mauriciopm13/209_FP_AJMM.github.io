@@ -4,75 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demography Visualization</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 12;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        header {
-            background-image: url('food_main2.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            color: black; 
-            padding: 40px 20px;
-            position: relative;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-
-        p {
-            margin: 20px 100px;
-            font-size: 14px;
-            color: #333;
-        }
-
+    <style>        
         .tableauPlaceholder {
-            margin: 20px 290px;
+            position: relative;
             opacity: 0; 
             transition: opacity 1s ease-in-out;
-            align-content: center;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            /*Solves a problem in which the content is being cut when the div is smaller than its' wrapper:*/
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            display: felx;
         }
-
-        img {
-            max-width: 10%;
-            height: auto;
-        }
-
-        .icon-link {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            text-decoration: none;
-            font-size: 20px;
-            /*color: white;  Color del ícono para que contraste con el fondo */
-        }
-
-        .icon-link img {
-            width: 1px; /* Ancho de la imagen del ícono */
-            height: 1px; /* Alto de la imagen del ícono */
-            border-radius: 80%; /* Bordes redondeados para un estilo interesante */
-            transition: transform 0.3s ease; /* Efecto al pasar el mouse */
-        }
-
-        .icon-link img:hover {
-            transform: scale(1.2); /* Agranda la imagen al pasar el mouse */
-        }
-
     </style>
-
+<!-- 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Agricultural Land Decline and Caloric Supply Growth</title>
 <link rel="stylesheet" href="styles.css">
 <script src="https://d3js.org/d3.v6.min.js"></script>
-<script src="https://unpkg.com/scrollama"></script>
+<script src="https://unpkg.com/scrollama"></script>-->
 </head>
 <body>
 
@@ -99,22 +54,20 @@
 </head>
 <body>
     <header>
-        <h1 style="color: black;">Explore demographic trends</h1>
-        <img src="home.jpg" class="icon-link" alt="Go to Home" style="cursor: pointer; height:40px; width:40px; border-radius: 80%; position:absolute; top: 10px; right: 10px" onclick="window.location.href='main_title_v2.html';">
+        <h1 style="color: black;font-family: Arial, sans-serif; font-size: 14;margin: 50px;padding: 20px;text-align: center;border-radius: 10px;border-style: solid; font-weight: bold">Explore demographic trends</h1>
     </header>
     <main>
-        <p>The goal of this visualization is to aid on the task of exploring patterns and discovering trends of average daily macronutrient consumption in United States across gender, race and age. You can select the nutrient you are interested in using the scrollbar at the top of the graphs. The color bar at the bottom of the heatmap serves as an ordering scale: the darker the color of the square, the higher the average consumption of the selected nutrient for a given combination of gender and age will be, although you can hover over the square to see the exact value. You can select/deselect a specific gender, race or a combination of both by clicking/double-clicking on the text or the squares on the heatmap to see a granularized version of the average consumption per age.</p>
-
-        <div class='tableauPlaceholder' id='viz1742926487305' style='position: relative'><noscript><a href='#'><img alt='Demography Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_demography_v2&#47;DemographyDashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='viz_demography_v2&#47;DemographyDashboard' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_demography_v2&#47;DemographyDashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1742926487305');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+        <div class='tableauPlaceholder' id='viz1744437456477' style='position: relative'><noscript><a href='#'><img alt='Demographics per age and race ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_demography_v2&#47;Demographicsperageandrace&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='viz_demography_v2&#47;Demographicsperageandrace' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_demography_v2&#47;Demographicsperageandrace&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1744437456477');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='977px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <p style="font-family: Georgia, serif; font-size: 12;margin: 50px;padding: 20px;text-align: justify; text-justify: inter-word">
+        The goal of this visualization is to provide a tool to search for patterns and discover trends of average daily macronutrient consumption in United States across gender, race and age. Click on the buttons to select/deselect a demographic sector and use the scrollbar to select the nutrient you are interested in. You can select multiple demographies by using ctrl+click and visualize the exact average connsumption by hovering the cursor over the graphs.</p>
     </main>
-
     <script>
         // Show image after 0.5 secs
         window.onload = function() {
             setTimeout(() => {
-                const imageContainer = document.getElementById('viz1742926487305');
+                const imageContainer = document.getElementById('viz1744437456477');
                 imageContainer.style.opacity = 1; // Show image
-            }, 250); // 0.5 secs
+            }, 250); // 0.25 secs
         };
     </script>
 </body>
