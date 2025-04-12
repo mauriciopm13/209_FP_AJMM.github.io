@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What's on The Menu</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
 </head>
@@ -76,27 +77,65 @@
         <div class="team-member step" id="member1">
             <img src="Data/Jason.JPG" alt="Jason Chang">
             <h2>Jason Chang</h2>
-            <p>Hi, my name is Jason. I'm exploring the link between economic prosperity and caloric consumption because understanding this relationship is crucial for international policy makers addressing food security and public health officials tackling nutrition-related disparities. Beyond this project, I'm deeply passionate about data science and corporate strategy. When I'm not immersed in data, you can find me training for my next upcoming marathon or playing golf. Feel free to check out some of my personal projects on my <a href = https://github.com/chan572> Github Profile </a> Click <a href="caloric_gdp_map.html"> here </a> to learn more about economic prosperity and caloric consumption</p>
+            <p>Hi, my name is Jason. I'm exploring the link between economic prosperity and caloric consumption because understanding this relationship is crucial for international policy makers addressing food security and public health officials tackling nutrition-related disparities. Beyond this project, I'm deeply passionate about data science and corporate strategy. When I'm not immersed in data, you can find me training for my next upcoming marathon or playing golf. Feel free to check out some of my personal projects on my <a href = https://github.com/chan572> Github Profile </a> Click <!--<a href="caloric_gdp_map.html"> here </a>--> on the following button to learn more about economic prosperity and caloric consumption:
+            <div class="container" style="text-align: center">
+                    <button id="jason" type="button" class="btn btn-secondary btn-lg">GDP and Caloric Consumption</button>
+                </div>
+
+            </p>
         </div>
         <div class="team-member step" id="member2">
             <img src="Data/Andres.jpeg" alt="Andres Nieto">
             <h2>Andres Nieto</h2>
-            <p>Hi, my name is Andres.  Data enthusiast focused on discovering trends and associations between the consumption of nutrients and demographic factors in America. Let’s explore the daily average ingest of proteins, carbs, fats, etc. across age, race and gender!
-                github page: <a href= "https://github.com/AndresNietoGuadarrama" > Andres' Github</a>  Click <a href="demography_viz.html"> here </a> to learn more about Calorie consumption and how it varies by demographics here</p>
+            <p>Hi, my name is Andres. I'm a data enthusiast passionate about data science and spending time with my dogs. You can learn more about me <a href= "https://github.com/AndresNietoGuadarrama" >here</a>. The goal of the demography visualization is to provide a tool for the general public, nutritional specialists and policy makers for searching patterns and comparing trends of average daily macronutrient consumption in United States across gender, race and age using public data from the WWEIA (What We Eat in America) surveys.  Let’s explore the daily average ingest of proteins, carbs, fats, etc. across age, race and gender! Click <!-- <a href="demography_viz.html"> here </a> --> on the following button to learn more about macronutrien consumption and how it varies by demographics here:
+                <div class="container" style="text-align: center">
+                    <button id="andres" type="button" class="btn btn-secondary btn-lg">Dietary habits across demographies</button>
+                </div>
+            </p>
         </div>
         <div class="team-member step" id="member3">
             <img src="Data/Mike.png" alt="Mike Mandujano">
             <h2>Mike Mandujano</h2>
-            <p>Hi, my name is Mike. I'm exploring how land usage, particularly when referring to agricultural use of land has affected global caloric supply and what this means regarding production efficiency and shift in land use priorities across the globe. This will help public policy makers understand the history and current effects on changes in our processes and allow them to make better decisions based on data. Learn more about how land usage has affected our caloric production and consumption <a href="DataVizIndexProject.html">here</a></p>
+            <p>Hi, my name is Mike. I'm exploring how land usage, particularly when referring to agricultural use of land has affected global caloric supply and what this means regarding production efficiency and shift in land use priorities across the globe. This will help public policy makers understand the history and current effects on changes in our processes and allow them to make better decisions based on data. Learn more about how land usage has affected our caloric production and consumption by clicking on the following button: <!-- <a href="DataVizIndexProject.html">here</a>--> 
+                <div class="container" style="text-align: center">
+                    <button id="mike" type="button" class="btn btn-secondary btn-lg">Land usage and caloric production</button>
+                </div>
+            </p>
         </div>
         <div class="team-member step" id="member4">
             <img src="Data/Mauricio.png" alt="Mauricio Perez">
             <h2>Mauricio Perez</h2>
-            <p>Hi, my name is Mauricio. I'm exploring how fad diets trends have shaped and changed the scenery on food based imports into the US and how the public in general has fluctuated their interests in different diets across the years. These visuals will help anyone with a passion to understand food and trends to understand the interaction between people's interests in fad diets and how that varies through time as well as if any impact is had on the quantities of food imported to the US. Aside from this project, my main interests lie in understanding how data and people interact in the workplace, with a special emphasis on people development. Learn more about fad diets <a href="diet_fads.html">here</a></p>
+            <p>Hi, my name is Mauricio. I'm exploring how fad diets trends have shaped and changed the scenery on food based imports into the US and how the public in general has fluctuated their interests in different diets across the years. These visuals will help anyone with a passion to understand food and trends to understand the interaction between people's interests in fad diets and how that varies through time as well as if any impact is had on the quantities of food imported to the US. Aside from this project, my main interests lie in understanding how data and people interact in the workplace, with a special emphasis on people development. Learn more about fad diets by clicking on the following button: <!--<a href="diet_fads.html">here</a>-->
+                <div class="container" style="text-align: center">
+                    <button id="mauricio" type="button" class="btn btn-secondary btn-lg">Diet Fads trends over time</button>
+                </div>
+            </p>
         </div>
     </section>
 
     <!-- Scrollama Script -->
     <script src="scripts.js"></script>
+    <script type="text/javascript">
+    document.getElementById("andres").onclick = function () {
+        location.href = "demography_viz.html";
+    };
+    </script>
+    <script type="text/javascript">
+    document.getElementById("jason").onclick = function () {
+        location.href = "caloric_gdp_map.html";
+    };
+    </script>
+    <script type="text/javascript">
+    document.getElementById("mike").onclick = function () {
+        location.href = "DataVizIndexProject.html";
+    };
+    </script>
+    <script type="text/javascript">
+    document.getElementById("mauricio").onclick = function () {
+        location.href = "diet_fads.html";
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
 </body>
 </html>
